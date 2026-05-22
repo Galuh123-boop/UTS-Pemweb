@@ -6,19 +6,20 @@ import categoryRoutes from './routes/categoryRoute.js';
 import pembicaraRoutes from './routes/pembicaraRoute.js';
 
 const app = express();
-const port = 3000;
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
+// Route utama
 app.get('/', (req, res) => {
-    res.send('Ini adalah API untuk Invofest');
+  res.status(200).send('Ini adalah API untuk Invofest');
 });
 
+// Routes API
 app.use('/events', eventRoutes);
 app.use('/category', categoryRoutes);
 app.use('/pembicara', pembicaraRoutes);
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+// Export app untuk Vercel Serverless
+export default app;
