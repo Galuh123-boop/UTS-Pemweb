@@ -145,7 +145,7 @@ export default function SpeakerCreate() {
                 "https://placehold.co/300x200"
               }
               alt="preview"
-              className="w-full h-52 object-cover rounded-xl border object-cover"
+              className="w-full h-52 object-cover rounded-xl border"
             />
 
           </div>

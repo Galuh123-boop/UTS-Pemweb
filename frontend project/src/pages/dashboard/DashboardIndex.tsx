@@ -168,7 +168,7 @@ export default function DashboardIndex() {
 
                 {/* ICON */}
                 <div
-                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} text-white flex items-center justify-center shadow-lg`}
+                  className={`w-16 h-16 rounded-2xl bg-linear-to-br ${item.color} text-white flex items-center justify-center shadow-lg`}
                 >
                   {item.icon}
                 </div>
@@ -188,7 +188,7 @@ export default function DashboardIndex() {
       </div>
 
       {/* WELCOME */}
-      <div className="mt-10 bg-gradient-to-r from-red-700 to-red-500 rounded-3xl p-8 text-white shadow-lg">
+      <div className="mt-10 bg-linear-to-r from-red-700 to-red-500 rounded-3xl p-8 text-white shadow-lg">
 
         <h2 className="text-3xl font-bold">
           Invofest Event Management

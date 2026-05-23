@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 import { Button } from "../../../components/ui/Button";
@@ -15,7 +14,6 @@ type Category = {
 };
 
 export default function CategoryIndex() {
-  const navigate = useNavigate();
 
   const [categories, setCategories] = useState<Category[]>([]);
 
