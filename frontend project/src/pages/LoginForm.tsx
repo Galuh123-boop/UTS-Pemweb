@@ -56,7 +56,7 @@ export default function LoginForm() {
             />
             <InputPassword 
                 label="Password"
-                nama="password"
+                name="password"
                 register={register}
                 error={errors.password?.message}
             />
