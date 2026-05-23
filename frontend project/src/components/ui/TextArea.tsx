@@ -2,23 +2,23 @@ import type React from "react";
 
 interface TextAreaProps {
     label: string;
-    nama: string;
+    name: string;
     register: any;
     error?: string;
     placeholder?: string;
 }
 export const TextArea: React.FC<TextAreaProps> = ({
     label,
-    nama,
+    name,
     register,
     error,
     placeholder
 }) => {
     return (
         <div className="flex flex-col gap-1">
-            <label>{label}</label>
+            <label htmlFor={name}>{label}</label>
             <textarea
-                {...register(nama)}
+                {...register(name)}
                 placeholder={placeholder}
                 className="border rounded px-3 py-2 min-h-25"
             />

@@ -10,7 +10,7 @@ import { Select } from "../components/ui/Select";
 import { Link } from "react-router-dom";
 
 type FormData = {
-    nama: string;
+    name: string;
     email: string;
     password: string;
     password_confirm: string;
@@ -19,7 +19,7 @@ type FormData = {
 }
 
 const schema = z.object({
-    nama: z.string().min(1, "Nama harus diisi"),
+    name: z.string().min(1, "Nama harus diisi"),
     email: z.string().email("Format email tidak valid"),
     password: z.string().min(8, "Password minimal 8 karakter"),
     password_confirm: z.string().min(1, "Konfirmasi password wajib diisi"),
@@ -52,39 +52,39 @@ export default function RegisterForm() {
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
             <InputText
                 label="Nama"
-                nama="nama"
+                name="name"
                 register={register}
-                error={errors.nama?.message}
+                error={errors.name?.message}
             />
             <InputText
                 label="Email"
-                nama="email"
+                name="email"
                 register={register}
                 error={errors.email?.message}
             />
             <InputPassword
                 label="Password"
-                nama="password"
+                name="password"
                 register={register}
                 error={errors.password?.message}
             />
             <InputPassword
                 label="Password Confirm"
-                nama="password_confirm"
+                name="password_confirm"
                 register={register}
                 error={errors.password_confirm?.message}
             />
 
             <TextArea
                 label="Bio"
-                nama="bio"
+                name="bio"
                 register={register}
                 error={errors.bio?.message}
             />
 
             <Select
                 label="Event"
-                nama="event"
+                name="event"
                 register={register}
                 options={[
                     { label: "Invofest", value: "invofest" },
